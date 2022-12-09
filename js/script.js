@@ -1,8 +1,8 @@
-let input = document.getElementById("inputText");
-let inputList = document.getElementById("inputList");
-let hide = document.getElementById("hideText");
+let completBtn = document.querySelector(".complete-btn");
+let inputText = document.querySelector(".input-text");
+let list = document.querySelector(".list");
 
-input.addEventListener('keyup', addItem);
+inputText.addEventListener('keyup', addItem);
 
 function addItem(e) {
   var item = document.createElement('li');
@@ -10,20 +10,15 @@ function addItem(e) {
   item.setAttribute('id', 'addList');
 
   if (e.keyCode === 13) {
-    item.innerHTML = input.value;
-    item.innerHTML +=  "<button type='button' onclick='removeItem()'>삭제</button>";
+    item.innerHTML = inputText.value;
+    item.innerHTML +=  "<button type='button' onclick='removeItem()'>X</button>";
 
-    inputList.appendChild(item);
-
-    hideText();
+    list.appendChild(item);
+    deleteItem();
   }
 }
 
 function removeItem() {
   var li = document.getElementById('addList');
-  inputList.removeChild(li);
-}
-
-function hideText() {
-  hide.style.display = "block";
+  list.removeChild(li);
 }

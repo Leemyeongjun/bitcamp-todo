@@ -8,16 +8,32 @@
   <title>ToDo List</title>
 </head>
 <body>
-  <div class="todoList">
-    <h2>todos</h2>
-    <div class="mainList">
-      <input type="text" id="inputText">
-    </div>
-    <div>
-      <ul id="inputList">
+  <div class="todo">
+    
+    <div class="title">todos</div>
+
+    <div class="todo-container">
+      <div class="text-container">
+        <button class="complete-btn">✔</button>
+        <input type="text" class="input-text" placeholder="할 일을 입력해주세요!">
+      </div>
+
+      <ul class="list">
 
       </ul>
-      <p id="hideText">All Active Completed</p>
+
+      <div class="bottom-text">
+        <div class="left-item">0 items left</div>
+        <div class="right-group">
+          <button class="show-all selected" data-type="all">All</button>
+          <button class="show-active" data-type="active">Active</button>
+          <button class="show-completed" data-type="completed">Completed</button>
+        </div>
+        <button class="clear-btn">Clear Completed</button>
+      </div>
+
+      <p class="info"></p>
+
     </div>
   </div>
   <script src="js/script.js" type="text/JavaScript"></script>
