@@ -2,6 +2,9 @@ let completBtn = document.querySelector(".complete-btn");
 let inputText = document.querySelector(".input-text");
 let list = document.querySelector(".list");
 
+let todoList = [];
+let id = [];
+
 inputText.addEventListener('keyup', addItem);
 
 function addItem(e) {
